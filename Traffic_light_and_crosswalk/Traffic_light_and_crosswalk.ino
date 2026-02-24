@@ -10,6 +10,8 @@ const int walkGreenLedPin = 2;
 
 int buttonState = 0;
 
+int memory = LOW;
+
 
 void setup() {
   // put your setup code here, to run once:
@@ -25,13 +27,13 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if(buttonState == HIGH) {
+  buttonState = digitalRead(buttonPin);
+  
+  if(buttonState != memory && buttonState == HIGH) {
     digitalWrite(walkRedLedPin, LOW);
     digitalWrite(walkGreenLedPin, HIGH);
     delay(3000);
     digitalWrite(walkGreenLedPin, LOW);
-
-    buttonState = digitalRead(buttonPin);
   } else {
     digitalWrite(walkRedLedPin, HIGH);
 
@@ -50,6 +52,6 @@ void loop() {
     delay(5000);
     digitalWrite(trafficGreenLedPin, LOW);
 
-    buttonState = digitalRead(buttonPin);
+    memory == buttonState;
   }
 }
