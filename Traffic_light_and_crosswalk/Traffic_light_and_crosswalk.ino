@@ -52,6 +52,6 @@ void loop() {
     delay(5000);
     digitalWrite(trafficGreenLedPin, LOW);
 
-    memory == buttonState;
+    memory = buttonState;
   }
 }
