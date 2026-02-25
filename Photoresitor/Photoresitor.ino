@@ -15,7 +15,7 @@ void setup() {
 void loop() {
   sensorValue = analogRead(analogInPin);
   //outLedValue = (sensorValue * 255) / 1024;
-  outLedValue = map(sensorValue, 0, 1024, 0, 255);
+  outLedValue = map(sensorValue, 0, 1023, 0, 255);
 
   analogWrite(analogOutLedPIn, outLedValue);
 
