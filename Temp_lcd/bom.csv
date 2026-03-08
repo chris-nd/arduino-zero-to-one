@@ -1,0 +1,6 @@
+﻿Nom,Quantité,Composant
+"U1",1," Arduino Uno R3"
+"U2",1," Capteur de température [TMP36]"
+"U3",1," Écran LCD 16x2"
+"Rpot1",1,"250 kΩ Potentiomètre"
+"R2, R3",2,"1 kΩ Résistance"
